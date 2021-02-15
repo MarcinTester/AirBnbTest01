@@ -13,7 +13,7 @@ public class LandingPage {
 	By search = By.xpath("//button[@data-testid='structured-search-input-search-button']");
 	 
 	 public LandingPage(WebDriver driver) {
-	    	this.driver = driver;
+	this.driver = driver;
 	}
 
 	public void setLocation(String location)
