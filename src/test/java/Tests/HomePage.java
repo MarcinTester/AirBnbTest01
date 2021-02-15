@@ -1,6 +1,8 @@
 package Tests;
 
 import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -11,11 +13,12 @@ import pageObjects.LandingPage;
 import pageObjects.SearchPage;
 
 public class HomePage extends Base {
-
+	public WebDriver driver;
 	
 	@BeforeMethod
 	public void setUp() throws IOException
 	{
+		
 		driver = initializeDriver();
 		driver.get("https://www.airbnb.com/");
 		
@@ -32,7 +35,8 @@ public class HomePage extends Base {
 		Thread.sleep(500);
 		LandingPage landingPage = new LandingPage(driver);
 		landingPage.setLocation(location);
-		landingPage.clickCalendar();
+		landingPage.getCalendar().click();
+		landingPage.getNextMonth().click();
 		Thread.sleep(500);		
 		landingPage.selectCheckInDay(CheckIndayNumber);
 		landingPage.selectCheckOutDay(CheckOutdayNumber);
@@ -67,7 +71,7 @@ public class HomePage extends Base {
 	@AfterTest
 	public void tearDown() throws IOException
 	{
-
+	
 	}
 	@DataProvider
 		public Object[][] getData()

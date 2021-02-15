@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="none" name="Failed suite [Suite]">
-  <test parallel="none" name="Test(failed)">
+<suite parallel="tests" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="Tests.Listeners"/>
+  </listeners>
+  <test parallel="tests" name="Validate Hope Page Text Test(failed)">
     <classes>
+      <class name="Tests.ValidateHomePageTexts">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="textValidation"/>
+        </methods>
+      </class> <!-- Tests.ValidateHomePageTexts -->
+      <class name="Tests.LoginTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- Tests.LoginTest -->
       <class name="Tests.HomePage">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- Tests.HomePage -->
-      <class name="Tests.ValidateHomePageTexts">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- Tests.ValidateHomePageTexts -->
-      <class name="Tests.LoginTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="loginTest"/>
-          <include name="TearDown"/>
-        </methods>
-      </class> <!-- Tests.LoginTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Validate Hope Page Text Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

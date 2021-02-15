@@ -3,6 +3,7 @@ package Tests;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -11,6 +12,7 @@ import Resources.Base;
 import pageObjects.LandingPage;
 
 public class LoginTest extends Base{
+	public WebDriver driver;
 	@BeforeMethod
 	public void setUp() throws IOException
 	{
@@ -29,7 +31,7 @@ public class LoginTest extends Base{
 		landingPage.login(Email, Password);
 		Thread.sleep(5000);
 		landingPage.notificationExists();
-		System.out.println(landingPage.notificationExists());
+	//	System.out.println(landingPage.notificationExists());
 	}
 	@AfterTest
 	public void TearDown() throws IOException

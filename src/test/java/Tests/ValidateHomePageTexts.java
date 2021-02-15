@@ -2,7 +2,7 @@ package Tests;
 
 import java.io.IOException;
 
-
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -13,7 +13,7 @@ import pageObjects.LandingPage;
 
 
 public class ValidateHomePageTexts extends Base {
-
+	public WebDriver driver;
 	
 	@BeforeMethod
 	public void setUp() throws IOException
@@ -32,7 +32,7 @@ public class ValidateHomePageTexts extends Base {
 
 		Assert.assertTrue(landingPage.getGoNear().isDisplayed());
 
-	//	Assert.assertEquals(landingPage.getGoNear().getText(), "Go\r\nNear");
+	
 	}
 	@AfterTest
 	public void tearDown() throws IOException
