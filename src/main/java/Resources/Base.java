@@ -23,8 +23,8 @@ public class Base {
 		
 		prop.load(fis);
 		
-		String browserName = System.getProperty("browser");
-	//	String browserName = prop.getProperty("browser");
+	//	String browserName = System.getProperty("browser");
+		String browserName = prop.getProperty("browser");
 		if(browserName.contains("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\chromedriver.exe");
