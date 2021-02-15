@@ -19,6 +19,7 @@ public class LandingPage {
 	public void setLocation(String location)
 	 {
 		driver.findElement(destination).sendKeys(location);
+		
 	 }
 	public void clickSearch()
 	{
