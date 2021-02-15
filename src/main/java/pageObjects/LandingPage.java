@@ -19,13 +19,11 @@ public class LandingPage {
 	public void setLocation(String location)
 	 {
 		driver.findElement(destination).sendKeys(location);
-		
 	 }
 	public void clickSearch()
 	{
 		driver.findElement(search).click();
 	}
-	
 	By nextButton = By.xpath("//button[@aria-label = \"Next\"]");
 	By calendar = By.cssSelector("div[data-testid='structured-search-input-field-split-dates-0']");
 	public WebElement getCalendar()
