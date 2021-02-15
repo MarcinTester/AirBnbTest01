@@ -14,7 +14,7 @@ public class LandingPage {
 	 
 	 public LandingPage(WebDriver driver) {
 		 this.driver = driver;
-		 //test push
+		`
 	}
 
 	public void setLocation(String location)
