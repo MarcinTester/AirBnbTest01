@@ -1,125 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="4" passed="4" failed="0" skipped="0">
+<testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-15T20:41:05Z" name="Suite" finished-at="2021-02-15T20:41:45Z" duration-ms="40061">
+  <suite started-at="2021-03-01T21:16:43Z" name="Default suite" finished-at="2021-03-01T21:16:58Z" duration-ms="14314">
     <groups>
     </groups>
-    <test started-at="2021-02-15T20:41:05Z" name="Test" finished-at="2021-02-15T20:41:45Z" duration-ms="40061">
-      <class name="Tests.HomePage">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.HomePage@18df8434]" started-at="2021-02-15T21:41:05Z" name="setUp" finished-at="2021-02-15T21:41:10Z" duration-ms="4894" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="basePageNavigation(java.lang.String, java.lang.String, java.lang.String, int, int, int)[pri:0, instance:Tests.HomePage@18df8434]" started-at="2021-02-15T21:41:10Z" name="basePageNavigation" data-provider="getData" finished-at="2021-02-15T21:41:17Z" duration-ms="7272" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Karpacz]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[31]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- basePageNavigation -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.HomePage@18df8434]" started-at="2021-02-15T21:41:17Z" name="setUp" finished-at="2021-02-15T21:41:20Z" duration-ms="2694" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="basePageNavigation(java.lang.String, java.lang.String, java.lang.String, int, int, int)[pri:0, instance:Tests.HomePage@18df8434]" started-at="2021-02-15T21:41:20Z" name="basePageNavigation" data-provider="getData" finished-at="2021-02-15T21:41:27Z" duration-ms="6613" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Poznań]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[16]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- basePageNavigation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.HomePage@18df8434]" started-at="2021-02-15T21:41:45Z" name="tearDown" finished-at="2021-02-15T21:41:45Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:Tests.LoginTest@368247b9]" started-at="2021-02-15T21:41:45Z" name="TearDown" finished-at="2021-02-15T21:41:45Z" duration-ms="39" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ValidateHomePageTexts@1a6d8329]" started-at="2021-02-15T21:41:45Z" name="tearDown" finished-at="2021-02-15T21:41:45Z" duration-ms="63" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Tests.HomePage -->
-      <class name="Tests.ValidateHomePageTexts">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.ValidateHomePageTexts@1a6d8329]" started-at="2021-02-15T21:41:27Z" name="setUp" finished-at="2021-02-15T21:41:32Z" duration-ms="4903" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="textValidation()[pri:0, instance:Tests.ValidateHomePageTexts@1a6d8329]" started-at="2021-02-15T21:41:32Z" name="textValidation" finished-at="2021-02-15T21:41:33Z" duration-ms="1034" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- textValidation -->
-      </class> <!-- Tests.ValidateHomePageTexts -->
+    <test started-at="2021-03-01T21:16:43Z" name="Default test" finished-at="2021-03-01T21:16:58Z" duration-ms="14314">
       <class name="Tests.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.LoginTest@368247b9]" started-at="2021-02-15T21:41:33Z" name="setUp" finished-at="2021-02-15T21:41:35Z" duration-ms="2730" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.LoginTest@2e3967ea]" started-at="2021-03-01T22:16:43Z" name="setUp" finished-at="2021-03-01T22:16:48Z" duration-ms="4631" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginTest()[pri:0, instance:Tests.LoginTest@368247b9]" started-at="2021-02-15T21:41:35Z" name="loginTest" finished-at="2021-02-15T21:41:45Z" duration-ms="9800" status="PASS">
+        <test-method signature="loginTest()[pri:0, instance:Tests.LoginTest@2e3967ea]" started-at="2021-03-01T22:16:48Z" name="loginTest" finished-at="2021-03-01T22:16:57Z" duration-ms="9633" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:Tests.LoginTest@2e3967ea]" started-at="2021-03-01T22:16:57Z" name="TearDown" finished-at="2021-03-01T22:16:58Z" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
       </class> <!-- Tests.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

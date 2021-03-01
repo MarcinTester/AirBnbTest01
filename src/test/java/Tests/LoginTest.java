@@ -26,8 +26,8 @@ public class LoginTest extends Base{
 	{
 		LandingPage landingPage = new LandingPage(driver);
 		Thread.sleep(1000);
-		String Email = "marcin129129@interia.pl";
-		String Password = "testtest191!";
+		String Email = "marcintest19@gmail.com";
+		String Password = "thisismypassword!";
 		landingPage.login(Email, Password);
 		Thread.sleep(5000);
 		landingPage.notificationExists();
