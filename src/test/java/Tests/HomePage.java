@@ -1,8 +1,11 @@
 package Tests;
 
 import java.io.IOException;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -37,19 +40,24 @@ public class HomePage extends Base {
 		landingPage.setLocation(location);
 		landingPage.getCalendar().click();
 		landingPage.getNextMonth().click();
-		Thread.sleep(500);		
+
+		Thread.sleep(1000);		
 		landingPage.selectCheckInDay(CheckIndayNumber);
+		Thread.sleep(1000);
 		landingPage.selectCheckOutDay(CheckOutdayNumber);
 		Thread.sleep(500);
 	
-		Assert.assertTrue(landingPage.get1Day().isDisplayed());
-		Assert.assertTrue(landingPage.get3Days().isDisplayed());
-		Assert.assertTrue(landingPage.get7Days().isDisplayed());
-		Assert.assertTrue(landingPage.get7Days().isDisplayed());
-		landingPage.get1Day().click();
-		landingPage.get3Days().click();
-		landingPage.get7Days().click();
-		landingPage.getExtendDates().click();
+	//	Assert.assertTrue(landingPage.get1Day().isDisplayed());
+	//	Assert.assertTrue(landingPage.get3Days().isDisplayed());
+	//	Assert.assertTrue(landingPage.get7Days().isDisplayed());
+	//	Assert.assertTrue(landingPage.get7Days().isDisplayed());
+	//	landingPage.get1Day().click();
+	//	landingPage.get1Day().isSelected();
+	//	landingPage.get3Days().click();
+	//	landingPage.get3Days().isSelected();
+	//	landingPage.get7Days().click();
+	//	landingPage.get7Days().isSelected();
+	//	landingPage.getExtendDates().click();
 		
 		landingPage.addGuests(adultsNumber, kidsNumber, infantsNumber);
 	
@@ -79,7 +87,7 @@ public class HomePage extends Base {
 		Object[][] data= new Object[2][6];
 		data[0][0] = "Karpacz";
 		data[0][1] = "1";
-		data[0][2] = "31";
+		data[0][2] = "30";
 		data[0][3] = 1;
 		data[0][4] = 2;
 		data[0][5] = 2;

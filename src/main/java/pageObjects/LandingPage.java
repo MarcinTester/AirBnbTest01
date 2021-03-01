@@ -36,51 +36,30 @@ public class LandingPage {
 	}
 	public void selectCheckInDay(String CheckIndayNumber)
 	{	
-		List<WebElement> datesList = driver.findElements(By.xpath("/html[1]/body[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/header"
-																	+ "[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/"
-																	+ "div[3]/div[4]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div"
-																	+ "[2]/div[2]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr"));
-		  for(WebElement row:datesList)
+		List<WebElement> td = driver.findElements(By.xpath("//td[@role='button']"));
+		for(WebElement x:td)
 		  {
-			  if (row.getText().contains(CheckIndayNumber))
-			  {
-				  List<WebElement> rowList =  row.findElements(By.tagName("td"));
-				  for(WebElement cell:rowList)
-				  {
-					  if (cell.getText().equals(CheckIndayNumber))
-					  { 
-						  cell.click();
-						  break;
-					  }
-				  }
-			  }
-		
+			System.out.println(x.getText());
+			if (x.getText().equals(CheckIndayNumber))
+			{
+				x.click();
+			}
 		  }
 	}
 	
 	public void selectCheckOutDay(String CheckOutdayNumber)
 	{	
-		List<WebElement> datesList = driver.findElements(By.xpath("/html[1]/body[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/header"
-																	+ "[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/"
-																	+ "div[3]/div[4]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div"
-																	+ "[2]/div[2]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr"));
-		
-		for(WebElement row:datesList)
-		{
-			if (row.getText().contains(CheckOutdayNumber))
+		List<WebElement> td = driver.findElements(By.xpath("//td[@role='button']"));
+		for(WebElement x:td)
+		  {
+			System.out.println(x.getText());
+			if (x.getText().equals(CheckOutdayNumber))
 			{
-				List<WebElement> rowList =  row.findElements(By.tagName("td"));
-				for(WebElement cell:rowList)
-				{
-					if (cell.getText().equals(CheckOutdayNumber))
-					{
-						cell.click();
-						break;
-					}
-				}
+				x.click();
+				
 			}
-			
-		}
+		  }
+
 	}
 	
 	public void login(String Email, String Password) throws InterruptedException
