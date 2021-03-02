@@ -28,8 +28,8 @@ public class HomePage extends Base {
 	}
 	@Test(dataProvider="getData")
 	public void basePageNavigation(String location, 
-								   String CheckIndayNumber, 
-								   String CheckOutdayNumber,
+								   String checkIndayNumber, 
+								   String checkOutdayNumber,
 								   int adultsNumber,
 								   int kidsNumber,
 								   int infantsNumber) throws IOException, InterruptedException
@@ -42,9 +42,9 @@ public class HomePage extends Base {
 		landingPage.getNextMonth().click();
 
 		Thread.sleep(1000);		
-		landingPage.selectCheckInDay(CheckIndayNumber);
+		landingPage.selectCheckInDay(checkIndayNumber);
 		Thread.sleep(1000);
-		landingPage.selectCheckOutDay(CheckOutdayNumber);
+		landingPage.selectCheckOutDay(checkOutdayNumber);
 		Thread.sleep(500);
 	
 		Assert.assertTrue(landingPage.get1Day().isDisplayed());

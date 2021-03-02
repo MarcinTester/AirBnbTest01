@@ -34,26 +34,26 @@ public class LandingPage {
 	{
 		return driver.findElement(nextButton);
 	}
-	public void selectCheckInDay(String CheckIndayNumber)
+	public void selectCheckInDay(String checkIndayNumber)
 	{	
 		List<WebElement> td = driver.findElements(By.xpath("//td[@role='button']"));
 		for(WebElement x:td)
 		  {
 		
-			if (x.getText().equals(CheckIndayNumber))
+			if (x.getText().equals(checkIndayNumber))
 			{
 				x.click();
 			}
 		  }
 	}
 	
-	public void selectCheckOutDay(String CheckOutdayNumber)
+	public void selectCheckOutDay(String checkOutdayNumber)
 	{	
 		List<WebElement> td = driver.findElements(By.xpath("//td[@role='button']"));
 		for(WebElement x:td)
 		  {
 		
-			if (x.getText().equals(CheckOutdayNumber))
+			if (x.getText().equals(checkOutdayNumber))
 			{
 				x.click();
 				
@@ -62,15 +62,15 @@ public class LandingPage {
 
 	}
 	
-	public void login(String Email, String Password) throws InterruptedException
+	public void login(String email, String password) throws InterruptedException
 	{
 		driver.findElement(By.id("field-guide-toggle")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.cssSelector("a[data-testid='cypress-headernav-login']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.cssSelector("button[data-testid='social-auth-button-email']")).click();
-		driver.findElement(By.id("email")).sendKeys(Email);
-		driver.findElement(By.id("password")).sendKeys(Password);
+		driver.findElement(By.id("email")).sendKeys(email);
+		driver.findElement(By.id("password")).sendKeys(password);
 		driver.findElement(By.cssSelector("button[data-testid='signup-login-submit-btn']")).click();
 
 	}
