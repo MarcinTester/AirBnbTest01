@@ -12,6 +12,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Base {
@@ -19,8 +20,7 @@ public class Base {
 	public WebDriver initializeDriver() throws IOException
 	{
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\Users\\Marcin\\eclipse-workspace\\Airbnb06\\src\\main\\java\\Resources\\data.properties");
-		
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties");
 		prop.load(fis);
 		
 	//	String browserName = System.getProperty("browser");
@@ -40,9 +40,10 @@ public class Base {
 			 System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\geckodriver.exe");
 			 driver = new FirefoxDriver();
 		}
-		else if (browserName.equals("IE"))
+		else if (browserName.equals("edge"))
 		{
-			
+			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\msedgedriver.exe");
+			driver = new EdgeDriver();
 		}
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
