@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="2" passed="2" failed="0" skipped="0">
+<testng-results total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-02T20:37:49Z" name="Default suite" finished-at="2021-03-02T20:38:21Z" duration-ms="32119">
+  <suite started-at="2021-03-02T22:13:22Z" name="Suite" finished-at="2021-03-02T22:14:09Z" duration-ms="47101">
     <groups>
     </groups>
-    <test started-at="2021-03-02T20:37:49Z" name="Default test" finished-at="2021-03-02T20:38:21Z" duration-ms="32119">
+    <test started-at="2021-03-02T22:13:22Z" name="Test" finished-at="2021-03-02T22:14:09Z" duration-ms="47101">
       <class name="Tests.HomePage">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.HomePage@6221a451]" started-at="2021-03-02T21:37:49Z" name="setUp" finished-at="2021-03-02T21:37:54Z" duration-ms="5058" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.HomePage@1c7696c6]" started-at="2021-03-02T23:13:22Z" name="setUp" finished-at="2021-03-02T23:13:26Z" duration-ms="4667" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="basePageNavigation(java.lang.String, java.lang.String, java.lang.String, int, int, int)[pri:0, instance:Tests.HomePage@6221a451]" started-at="2021-03-02T21:37:54Z" name="basePageNavigation" data-provider="getData" finished-at="2021-03-02T21:38:06Z" duration-ms="12240" status="PASS">
+        <test-method signature="basePageNavigation(java.lang.String, java.lang.String, java.lang.String, int, int, int)[pri:0, instance:Tests.HomePage@1c7696c6]" started-at="2021-03-02T23:13:26Z" name="basePageNavigation" data-provider="getData" finished-at="2021-03-02T23:13:37Z" duration-ms="10348" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,11 +47,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- basePageNavigation -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.HomePage@6221a451]" started-at="2021-03-02T21:38:06Z" name="setUp" finished-at="2021-03-02T21:38:08Z" duration-ms="2459" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.HomePage@1c7696c6]" started-at="2021-03-02T23:13:37Z" name="setUp" finished-at="2021-03-02T23:13:41Z" duration-ms="4396" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="basePageNavigation(java.lang.String, java.lang.String, java.lang.String, int, int, int)[pri:0, instance:Tests.HomePage@6221a451]" started-at="2021-03-02T21:38:08Z" name="basePageNavigation" data-provider="getData" finished-at="2021-03-02T21:38:21Z" duration-ms="12346" status="PASS">
+        <test-method signature="basePageNavigation(java.lang.String, java.lang.String, java.lang.String, int, int, int)[pri:0, instance:Tests.HomePage@1c7696c6]" started-at="2021-03-02T23:13:41Z" name="basePageNavigation" data-provider="getData" finished-at="2021-03-02T23:13:51Z" duration-ms="9937" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -87,11 +87,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- basePageNavigation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.HomePage@6221a451]" started-at="2021-03-02T21:38:21Z" name="tearDown" finished-at="2021-03-02T21:38:21Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:Tests.LoginTest@60099951]" started-at="2021-03-02T23:14:09Z" name="TearDown" finished-at="2021-03-02T23:14:09Z" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.HomePage@1c7696c6]" started-at="2021-03-02T23:14:09Z" name="tearDown" finished-at="2021-03-02T23:14:09Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ValidateHomePageTexts@7b36aa0c]" started-at="2021-03-02T23:14:09Z" name="tearDown" finished-at="2021-03-02T23:14:09Z" duration-ms="62" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Tests.HomePage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="Tests.ValidateHomePageTexts">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.ValidateHomePageTexts@7b36aa0c]" started-at="2021-03-02T23:13:51Z" name="setUp" finished-at="2021-03-02T23:13:54Z" duration-ms="2448" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="textValidation()[pri:0, instance:Tests.ValidateHomePageTexts@7b36aa0c]" started-at="2021-03-02T23:13:54Z" name="textValidation" finished-at="2021-03-02T23:13:55Z" duration-ms="1133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- textValidation -->
+      </class> <!-- Tests.ValidateHomePageTexts -->
+      <class name="Tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.LoginTest@60099951]" started-at="2021-03-02T23:13:55Z" name="setUp" finished-at="2021-03-02T23:13:59Z" duration-ms="4354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTest()[pri:0, instance:Tests.LoginTest@60099951]" started-at="2021-03-02T23:13:59Z" name="loginTest" finished-at="2021-03-02T23:14:09Z" duration-ms="9697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+      </class> <!-- Tests.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
