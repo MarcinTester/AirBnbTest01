@@ -100,8 +100,6 @@ public class LandingPage {
 	    	driver.findElement(addInfants).click();
 	    }
 	}
-
-	
 	By extendDates = By.cssSelector("label[for=\"flexible-dates-flexible_date_search_filter_type-0\"]");
 	public WebElement getExtendDates()
 	{
@@ -127,6 +125,4 @@ public class LandingPage {
 	{
 		return driver.findElement(goNear);
 	}
-	
-	
 }
