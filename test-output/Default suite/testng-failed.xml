@@ -5,8 +5,7 @@
     <classes>
       <class name="Tests.HomePage">
         <methods>
-          <include name="basePageNavigation" invocation-numbers="0 1"/>
-          <include name="tearDown"/>
+          <include name="basePageNavigation"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- Tests.HomePage -->
