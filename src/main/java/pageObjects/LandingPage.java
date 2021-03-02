@@ -39,7 +39,7 @@ public class LandingPage {
 		List<WebElement> td = driver.findElements(By.xpath("//td[@role='button']"));
 		for(WebElement x:td)
 		  {
-			System.out.println(x.getText());
+		
 			if (x.getText().equals(CheckIndayNumber))
 			{
 				x.click();
@@ -52,7 +52,7 @@ public class LandingPage {
 		List<WebElement> td = driver.findElements(By.xpath("//td[@role='button']"));
 		for(WebElement x:td)
 		  {
-			System.out.println(x.getText());
+		
 			if (x.getText().equals(CheckOutdayNumber))
 			{
 				x.click();
