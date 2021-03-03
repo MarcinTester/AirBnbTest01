@@ -58,12 +58,12 @@ public class CalendarTest extends Base {
 	//	landingPage.getExtendDates().isSelected();
 	//	System.out.println(landingPage.getExtendDates().isSelected());
 		
-		driver.close();
+
 	}
 	@AfterTest
 	public void tearDown() throws IOException
 	{
-	
+		driver.close();
 	}
 	@DataProvider
 		public Object[][] getData()

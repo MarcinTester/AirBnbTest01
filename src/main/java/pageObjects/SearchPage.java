@@ -27,4 +27,14 @@ public class SearchPage {
 	{
 		return driver.findElement(map);
 	}
+	By cancellationFlexibilityButton = By.id("menuItemButton-flexible_cancellation");
+	public WebElement getCancellationFlexibilityButton()
+	{
+		return driver.findElement(cancellationFlexibilityButton);
+	}
+	By cancellationFlexibilitySwitch = By.id("filterItem-flexible_cancellation-switch-flexible_cancellation-true");
+	public WebElement getCancellationFlexibilitySwitch()
+	{
+		return driver.findElement(cancellationFlexibilitySwitch);
+	}
 }

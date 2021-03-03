@@ -67,7 +67,7 @@ public class LandingPage {
 	}
 	
 	By loginMenuButton = By.cssSelector("a[data-testid='cypress-headernav-login']");
-	public WebElement getLogiMenuButton()
+	public WebElement getLoginMenuButton()
 	{
 		return driver.findElement(loginMenuButton);
 	}
@@ -93,9 +93,9 @@ public class LandingPage {
 	}
 
 	By notification = By.cssSelector("div[aria-label='1 notification']");	
-	public boolean notificationExists()
+	public WebElement getNotification()
 	{
-		return driver.findElement(notification).isDisplayed();
+		return driver.findElement(notification);
 	}
 	
 	By guests = By.xpath("//div[contains(text(),'Guests')]");

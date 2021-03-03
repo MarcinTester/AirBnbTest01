@@ -51,6 +51,7 @@ public class HomePage extends Base {
 		Assert.assertTrue(landingPage.get3Days().isDisplayed());
 		Assert.assertTrue(landingPage.get7Days().isDisplayed());
 		Assert.assertTrue(landingPage.get7Days().isDisplayed());
+		//to do: is selected checks
 		landingPage.get1Day().click();
 		landingPage.get1Day().isSelected();
 		landingPage.get3Days().click();

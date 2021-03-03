@@ -6,6 +6,8 @@
       <class name="Tests.HomePage"/>
       <class name="Tests.ValidateHomePageTexts"/>
       <class name="Tests.LoginTest"/>
+      <class name="Tests.HomesTab"/>
+      <class name="Tests.CalendarTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -19,18 +19,18 @@ public class LoginTest extends Base{
 		driver = initializeDriver();
 		driver.get("https://www.airbnb.com/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 	}
-	
 	@Test	
 	public void loginTest() throws InterruptedException
 	{
 		LandingPage landingPage = new LandingPage(driver);
 		Thread.sleep(1000);
-		String email = "marcintest19@gmail.com";
+		String email = "test@gmail.com";
 		String password = "thisismypassword!";
-		
+	
 		landingPage.getHamburgerMenu().click();
-		landingPage.getLogiMenuButton().click();
+		landingPage.getLoginMenuButton().click();
 		Thread.sleep(1000);
 		landingPage.getByEmailButton().click();
 		landingPage.getEmailTextField().sendKeys(email);
@@ -38,15 +38,12 @@ public class LoginTest extends Base{
 		landingPage.getlogInButton().click();
 		
 		Thread.sleep(1000);
-		landingPage.notificationExists();
-		//System.out.println(landingPage.notificationExists());
+		landingPage.getNotification().isDisplayed();
+
 	}
 	@AfterTest
 	public void TearDown() throws IOException
 	{
 		driver.close();	
 	}
-	
-	
-	
 }
