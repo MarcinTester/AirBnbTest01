@@ -86,15 +86,15 @@ public class HomePage extends Base {
 		{
 		Object[][] data= new Object[2][6];
 		data[0][0] = "Karpacz";
-		data[0][1] = "1";
-		data[0][2] = "30";
+		data[0][1] = "5";
+		data[0][2] = "26";
 		data[0][3] = 1;
 		data[0][4] = 2;
 		data[0][5] = 2;
 		
 		data[1][0] = "Poznań";
-		data[1][1] = "5";
-		data[1][2] = "16";
+		data[1][1] = "19";
+		data[1][2] = "21";
 		data[1][3] = 3;
 		data[1][4] = 2;
 		data[1][5] = 1;

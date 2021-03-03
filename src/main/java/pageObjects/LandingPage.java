@@ -36,46 +36,64 @@ public class LandingPage {
 	}
 	public void selectCheckInDay(String checkIndayNumber)
 	{	
-		List<WebElement> td = driver.findElements(By.xpath("//td[@role='button']"));
-		for(WebElement x:td)
+		List<WebElement> rows = driver.findElements(By.xpath("//td[@role='button']"));
+		for(WebElement cell:rows)
 		  {
-		
-			if (x.getText().equals(checkIndayNumber))
+			if (cell.getText().equals(checkIndayNumber))
 			{
-				x.click();
+				cell.click();
+				break;
 			}
 		  }
 	}
 	
 	public void selectCheckOutDay(String checkOutdayNumber)
 	{	
-		List<WebElement> td = driver.findElements(By.xpath("//td[@role='button']"));
-		for(WebElement x:td)
+		List<WebElement> rows = driver.findElements(By.xpath("//td[@role='button']"));
+		for(WebElement cell:rows)
 		  {
-		
-			if (x.getText().equals(checkOutdayNumber))
+			if (cell.getText().equals(checkOutdayNumber))
 			{
-				x.click();
-				
+				cell.click();
+				break;
 			}
 		  }
+	}
 
+	By hamburgerMenu = By.id("field-guide-toggle");
+	public WebElement getHamburgerMenu()
+	{
+		return driver.findElement(hamburgerMenu);
 	}
 	
-	public void login(String email, String password) throws InterruptedException
+	By loginMenuButton = By.cssSelector("a[data-testid='cypress-headernav-login']");
+	public WebElement getLogiMenuButton()
 	{
-		driver.findElement(By.id("field-guide-toggle")).click();
-		Thread.sleep(1000);
-		driver.findElement(By.cssSelector("a[data-testid='cypress-headernav-login']")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.cssSelector("button[data-testid='social-auth-button-email']")).click();
-		driver.findElement(By.id("email")).sendKeys(email);
-		driver.findElement(By.id("password")).sendKeys(password);
-		driver.findElement(By.cssSelector("button[data-testid='signup-login-submit-btn']")).click();
-
+		return driver.findElement(loginMenuButton);
 	}
-	By notification = By.cssSelector("div[aria-label='1 notification']")
-;	public boolean notificationExists()
+	By byEmailButton = By.cssSelector("button[data-testid='social-auth-button-email']");
+	public WebElement getByEmailButton()
+	{
+		return driver.findElement(byEmailButton);
+	}
+	By emailTextField = By.id("email");
+	public WebElement getEmailTextField()
+	{
+		return driver.findElement(emailTextField);
+	}
+	By emailPasswordField = By.id("password");
+	public WebElement getPasswordTextField()
+	{
+		return driver.findElement(emailPasswordField);
+	}
+	By logInButton = By.cssSelector("button[data-testid='signup-login-submit-btn']");
+	public WebElement getlogInButton()
+	{
+		return driver.findElement(logInButton);
+	}
+
+	By notification = By.cssSelector("div[aria-label='1 notification']");	
+	public boolean notificationExists()
 	{
 		return driver.findElement(notification).isDisplayed();
 	}

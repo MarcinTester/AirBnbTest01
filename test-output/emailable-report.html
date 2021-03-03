@@ -31,42 +31,48 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi">0</td><td class="numi">47.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">15.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="2">Tests.HomePage</td><td><a href="#m1"><b>basePageNavigation</b>  </a></td><td class="numi">2</td><td>1614723206867</td><td class="numi">24682</td></tr><tr class="passedodd"><td><a href="#m2"><b>basePageNavigation</b>  </a></td><td class="numi">2</td><td>1614723206867</td><td class="numi">24682</td></tr>
-<tr class="passedeven"><td rowspan="1">Tests.ValidateHomePageTexts</td><td><a href="#m3"><b>textValidation</b>  </a></td><td class="numi">1</td><td>1614723234000</td><td class="numi">1133</td></tr>
-<tr class="passedodd"><td rowspan="1">Tests.LoginTest</td><td><a href="#m4"><b>loginTest</b>  </a></td><td class="numi">1</td><td>1614723239488</td><td class="numi">9697</td></tr>
+<tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">Tests.LoginTest</td><td><a href="#m1"><b>TearDown</b>  </a></td><td class="numi">1</td><td>1614792931112</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">Tests.LoginTest</td><td><a href="#m2"><b>loginTest</b>  </a></td><td class="numi">1</td><td>1614792922203</td><td class="numi">8905</td></tr>
 </table>
-<h1>Test</h1>
-<h2 id="m1">Tests.ValidateHomePageTexts:textValidation</h2>
+<h1>Default test</h1>
+<h2 id="m1">Tests.LoginTest:TearDown</h2>
+<div style="padding-left:3em">
+<p>chrome not reachable
+  (Session info: chrome=88.0.4324.190)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-JCSSE19&apos;, ip: &apos;192.168.1.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}), userDataDir=C:\Users\Marcin\AppData\Local\Temp\scoped_dir19684_1933880074}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:57316}, acceptInsecureCerts=false, browserVersion=88.0.4324.190, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:virtualAuthenticators=true}]
+Session ID: c262ada38d3b27099379d7f6509f8f76</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:523)
+<br/>at Tests.LoginTest.TearDown(LoginTest.java:47)
+<br/>23 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 <h2 id="m2">Tests.LoginTest:loginTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">Tests.HomePage:basePageNavigation</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr>
-<tr class="param stripe"><td>Pozna?</td>
-<td>5</td>
-<td>16</td>
-<td>3</td>
-<td>2</td>
-<td>1</td>
-</tr>
-</table>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">Tests.HomePage:basePageNavigation</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr>
-<tr class="param stripe"><td>Karpacz</td>
-<td>1</td>
-<td>30</td>
-<td>1</td>
-<td>2</td>
-<td>2</td>
-</tr>
-</table>
+<div style="padding-left:3em">
+<p>Cannot invoke &quot;org.openqa.selenium.WebElement.isDisplayed()&quot; because the return value of &quot;org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)&quot; is null</p>
+pageObjects.LandingPage.notificationExists(LandingPage.java:98)
+<br/>at Tests.LoginTest.loginTest(LoginTest.java:41)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

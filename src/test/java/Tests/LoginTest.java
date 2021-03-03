@@ -26,12 +26,20 @@ public class LoginTest extends Base{
 	{
 		LandingPage landingPage = new LandingPage(driver);
 		Thread.sleep(1000);
-		String Email = "marcintest19@gmail.com";
-		String Password = "thisismypassword!";
-		landingPage.login(Email, Password);
-		Thread.sleep(5000);
+		String email = "marcintest19@gmail.com";
+		String password = "thisismypassword!";
+		
+		landingPage.getHamburgerMenu().click();
+		landingPage.getLogiMenuButton().click();
+		Thread.sleep(1000);
+		landingPage.getByEmailButton().click();
+		landingPage.getEmailTextField().sendKeys(email);
+		landingPage.getPasswordTextField().sendKeys(password);
+		landingPage.getlogInButton().click();
+		
+		Thread.sleep(1000);
 		landingPage.notificationExists();
-	//	System.out.println(landingPage.notificationExists());
+		//System.out.println(landingPage.notificationExists());
 	}
 	@AfterTest
 	public void TearDown() throws IOException
