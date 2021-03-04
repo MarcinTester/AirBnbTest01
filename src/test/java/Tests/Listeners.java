@@ -22,7 +22,7 @@ public class Listeners extends Base implements ITestListener {
 	public void onTestStart(ITestResult result) {
 		test = extent.createTest(result.getMethod().getMethodName());
 		extentTest.set(test);
-	
+		
 	}
 
 	@Override

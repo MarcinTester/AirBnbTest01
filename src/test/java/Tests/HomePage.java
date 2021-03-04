@@ -1,11 +1,14 @@
 package Tests;
 
 import java.io.IOException;
-import java.util.List;
+
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -20,10 +23,9 @@ public class HomePage extends Base {
 	
 	@BeforeMethod
 	public void setUp() throws IOException
-	{
-		
+	{	
 		driver = initializeDriver();
-		driver.get("https://www.airbnb.com/");
+		visit("https://www.airbnb.com/");
 		
 	}
 	@Test(dataProvider="getData")
@@ -35,18 +37,21 @@ public class HomePage extends Base {
 								   int infantsNumber) throws IOException, InterruptedException
 	{	
 		driver.manage().window().maximize();
-		Thread.sleep(500);
+		WebDriverWait w = new WebDriverWait(driver,5);
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.setLocation(location);
+	
+		w.until(ExpectedConditions.visibilityOfElementLocated(By.id("bigsearch-query-detached-query")));
+		landingPage.getSetLocation().sendKeys(location);
+		
+		landingPage.getCalendar().isDisplayed();
 		landingPage.getCalendar().click();
 		landingPage.getNextMonth().click();
-
-		Thread.sleep(1000);		
-		landingPage.selectCheckInDay(checkIndayNumber);
-		Thread.sleep(1000);
-		landingPage.selectCheckOutDay(checkOutdayNumber);
-		Thread.sleep(500);
 	
+		w.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//td[@role='button']"), 0));
+		Thread.sleep(500);
+		landingPage.selectCheckInDay(checkIndayNumber);
+		landingPage.selectCheckOutDay(checkOutdayNumber);
+		
 		Assert.assertTrue(landingPage.get1Day().isDisplayed());
 		Assert.assertTrue(landingPage.get3Days().isDisplayed());
 		Assert.assertTrue(landingPage.get7Days().isDisplayed());
@@ -61,10 +66,8 @@ public class HomePage extends Base {
 		landingPage.getExtendDates().click();
 		
 		landingPage.addGuests(adultsNumber, kidsNumber, infantsNumber);
-	
 		landingPage.clickSearch();
-		Thread.sleep(500);
-		
+
 		SearchPage searchPage = new SearchPage(driver);
 		String guestNumber = String.valueOf(adultsNumber + kidsNumber);
 		
@@ -75,12 +78,12 @@ public class HomePage extends Base {
 		Assert.assertEquals(searchPage.checkStaysTest(location), "Stays in " + location);
 		
 		searchPage.getMap().isDisplayed();
-		driver.close();	
+		
 	}
 	@AfterTest
 	public void tearDown() throws IOException
 	{
-	
+		driver.close();
 	}
 	@DataProvider
 		public Object[][] getData()

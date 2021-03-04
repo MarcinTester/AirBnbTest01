@@ -2,6 +2,9 @@ package Tests;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -19,7 +22,7 @@ public class CalendarTest extends Base {
 	{
 		
 		driver = initializeDriver();
-		driver.get("https://www.airbnb.com/");
+		visit("https://www.airbnb.com/");
 		
 	}
 	@Test(dataProvider="getData")
@@ -28,18 +31,18 @@ public class CalendarTest extends Base {
 							String checkOutdayNumber) throws InterruptedException
 	{	
 		driver.manage().window().maximize();
-		Thread.sleep(500);
+		WebDriverWait w = new WebDriverWait(driver,5);
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.setLocation(location);
+		
+		w.until(ExpectedConditions.visibilityOfElementLocated(By.id("bigsearch-query-detached-query")));
+		landingPage.getSetLocation().sendKeys(location);
 		landingPage.getCalendar().click();
 		landingPage.getNextMonth().click();
 		
-		Thread.sleep(1000);		
+		Thread.sleep(500);		
 		landingPage.selectCheckInDay(checkIndayNumber);
-		Thread.sleep(1000);
 		landingPage.selectCheckOutDay(checkOutdayNumber);
-		Thread.sleep(500);
-		
+
 		Assert.assertTrue(landingPage.get1Day().isDisplayed());
 		Assert.assertTrue(landingPage.get3Days().isDisplayed());
 		Assert.assertTrue(landingPage.get7Days().isDisplayed());

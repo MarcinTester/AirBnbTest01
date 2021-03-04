@@ -1,6 +1,7 @@
 package pageObjects;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,16 +10,17 @@ import org.openqa.selenium.WebElement;
 public class LandingPage {
 	
 	public WebDriver driver;
-	By destination = By.id("bigsearch-query-detached-query");
+	
 	By search = By.xpath("//button[@data-testid='structured-search-input-search-button']");
 	 
 	 public LandingPage(WebDriver driver) {
 		 this.driver = driver;
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
-
-	public void setLocation(String location)
+	 By destination = By.id("bigsearch-query-detached-query");
+	public WebElement getSetLocation()
 	 {
-		driver.findElement(destination).sendKeys(location);
+		return driver.findElement(destination);
 	 }
 	public void clickSearch()
 	{
@@ -46,7 +48,6 @@ public class LandingPage {
 			}
 		  }
 	}
-	
 	public void selectCheckOutDay(String checkOutdayNumber)
 	{	
 		List<WebElement> rows = driver.findElements(By.xpath("//td[@role='button']"));

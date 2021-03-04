@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="Tests.HomePage"/>
-      <class name="Tests.ValidateHomePageTexts"/>
-      <class name="Tests.LoginTest"/>
-      <class name="Tests.HomesTab"/>
-      <class name="Tests.CalendarTest"/>
-    </classes>
-  </test> <!-- Test -->
+<!--suite parallel="tests" name="Suite"-->
+	<listeners>
+		<listener class-name="Tests.Listeners" />
+	</listeners>
+	<test name="HomePage">
+		<classes>
+			<class name="Tests.HomePage" />
+		</classes>
+	</test>
+	<test name="Validate HomePage Texts">
+		<classes>
+			<class name="Tests.ValidateHomePageTexts" />
+		</classes>
+	</test>
+	<test name="Login Test">
+		<classes>
+			<class name="Tests.LoginTest" />
+		</classes>
+	</test>
+	<test name="Homes Tab">
+		<classes>
+			<class name="Tests.HomesTab" />
+		</classes>
+	</test>
+	<test name="CalendarTest">
+		<classes>
+			<class name="Tests.CalendarTest" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

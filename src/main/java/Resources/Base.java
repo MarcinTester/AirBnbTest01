@@ -58,4 +58,9 @@ public class Base {
 		FileUtils.copyFile(source,new File(destinationFile));
 		return destinationFile;
 	}
+	
+	public void visit (String url)
+	{
+		driver.get(url);
+	}
 }
