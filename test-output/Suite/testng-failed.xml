@@ -1,17 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]">
+<suite parallel="none" name="Failed suite [Suite]">
   <listeners>
     <listener class-name="Tests.Listeners"/>
   </listeners>
-  <test parallel="tests" name="Login Test(failed)">
+  <test parallel="none" name="Validate HomePage Texts(failed)">
     <classes>
-      <class name="Tests.HomePage">
+      <class name="Tests.CalendarTest">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
+      </class> <!-- Tests.CalendarTest -->
+      <class name="Tests.ValidateHomePageTexts">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="textValidation"/>
+        </methods>
+      </class> <!-- Tests.ValidateHomePageTexts -->
+      <class name="Tests.LoginTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- Tests.LoginTest -->
+      <class name="Tests.HomePage">
+        <methods>
+          <include name="setUp"/>
+        </methods>
       </class> <!-- Tests.HomePage -->
+      <class name="Tests.HomesTab">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Tests.HomesTab -->
+    </classes>
+  </test> <!-- Validate HomePage Texts(failed) -->
+  <test parallel="none" name="Login Test(failed)">
+    <classes>
+      <class name="Tests.CalendarTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Tests.CalendarTest -->
+      <class name="Tests.ValidateHomePageTexts">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Tests.ValidateHomePageTexts -->
       <class name="Tests.LoginTest">
         <methods>
           <include name="setUp"/>
@@ -19,24 +59,17 @@
           <include name="TearDown"/>
         </methods>
       </class> <!-- Tests.LoginTest -->
+      <class name="Tests.HomePage">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Tests.HomePage -->
       <class name="Tests.HomesTab">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- Tests.HomesTab -->
-      <class name="Tests.ValidateHomePageTexts">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- Tests.ValidateHomePageTexts -->
-      <class name="Tests.CalendarTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Tests.CalendarTest -->
     </classes>
   </test> <!-- Login Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -25,15 +28,23 @@ public class HomesTab extends Base {
 	@Test
 	public void calendarTest() throws InterruptedException
 	{	
+		WebDriverWait w = new WebDriverWait(driver,5);
 		SearchPage searchPage = new SearchPage(driver);
 		searchPage.getCancellationFlexibilityButton().click();
 		searchPage.getCancellationFlexibilitySwitch().click();
 		Assert.assertEquals("true", searchPage.getCancellationFlexibilitySwitch().getAttribute("aria-checked"));
+		w.until(ExpectedConditions.elementToBeClickable(searchPage.getClearButton()));	
+		searchPage.getClearButton().click();
+		Assert.assertEquals("false", searchPage.getCancellationFlexibilitySwitch().getAttribute("aria-checked"));
+		searchPage.getTypeOfPlaceButton().click();
+		Thread.sleep(1000);
+		searchPage.getEntirePlaceCheckBox().click();
+		Thread.sleep(1000);
+		Assert.assertTrue(searchPage.getEntirePlaceCheckBox().isSelected());
 	}
 	@AfterTest
 	public void tearDown() throws IOException
 	{
-		
 		driver.close();
 	}
 

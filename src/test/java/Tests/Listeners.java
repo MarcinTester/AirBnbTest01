@@ -18,6 +18,7 @@ public class Listeners extends Base implements ITestListener {
 	ExtentTest test;
 	ExtentReports extent = ExtentReportsNG.getReportObject();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+	
 	@Override
 	public void onTestStart(ITestResult result) {
 		test = extent.createTest(result.getMethod().getMethodName());

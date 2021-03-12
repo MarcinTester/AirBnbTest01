@@ -37,4 +37,25 @@ public class SearchPage {
 	{
 		return driver.findElement(cancellationFlexibilitySwitch);
 	}
+	By typeOfPlaceButton = By.id("menuItemButton-room_type");
+	public WebElement getTypeOfPlaceButton()
+	{
+		return driver.findElement(typeOfPlaceButton);
+	}
+	By entirePlaceCheckBox = By.id("filterItem-room_type-checkbox-room_types-Entire_home_apt");
+	public WebElement getEntirePlaceCheckBox()
+	{
+		return driver.findElement(entirePlaceCheckBox);
+	}
+	
+
+	
+	
+	
+	
+	By clearButton = By.cssSelector("[data-testid=\"filter-panel-clear-button\"]");
+	public WebElement getClearButton()
+	{
+		return driver.findElement(clearButton);
+	}
 }

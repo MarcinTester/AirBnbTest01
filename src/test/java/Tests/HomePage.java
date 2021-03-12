@@ -22,10 +22,11 @@ public class HomePage extends Base {
 	public WebDriver driver;
 	
 	@BeforeMethod
-	public void setUp() throws IOException
+	public void setUp() throws IOException, InterruptedException
 	{	
 		driver = initializeDriver();
 		visit("https://www.airbnb.com/");
+		Thread.sleep(1000);
 		
 	}
 	@Test(dataProvider="getData")
@@ -78,13 +79,9 @@ public class HomePage extends Base {
 		Assert.assertEquals(searchPage.checkStaysTest(location), "Stays in " + location);
 		
 		searchPage.getMap().isDisplayed();
-		
-	}
-	@AfterTest
-	public void tearDown() throws IOException
-	{
 		driver.close();
 	}
+
 	@DataProvider
 		public Object[][] getData()
 		{
