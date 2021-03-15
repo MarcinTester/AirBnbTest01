@@ -38,8 +38,8 @@ public class LandingPage {
 	}
 	public void selectCheckInDay(String checkIndayNumber)
 	{	
-		List<WebElement> rows = driver.findElements(By.xpath("//td[@role='button']"));
-		for(WebElement cell:rows)
+		List<WebElement> tdButton = driver.findElements(By.xpath("//td[@role='button']"));
+		for(WebElement cell:tdButton)
 		  {
 			if (cell.getText().equals(checkIndayNumber))
 			{
@@ -50,8 +50,8 @@ public class LandingPage {
 	}
 	public void selectCheckOutDay(String checkOutdayNumber)
 	{	
-		List<WebElement> rows = driver.findElements(By.xpath("//td[@role='button']"));
-		for(WebElement cell:rows)
+		List<WebElement> tdButton = driver.findElements(By.xpath("//td[@role='button']"));
+		for(WebElement cell:tdButton)
 		  {
 			if (cell.getText().equals(checkOutdayNumber))
 			{

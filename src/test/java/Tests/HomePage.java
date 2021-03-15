@@ -40,10 +40,10 @@ public class HomePage extends Base {
 		driver.manage().window().maximize();
 		WebDriverWait w = new WebDriverWait(driver,5);
 		LandingPage landingPage = new LandingPage(driver);
-	
+		
 		w.until(ExpectedConditions.visibilityOfElementLocated(By.id("bigsearch-query-detached-query")));
 		landingPage.getSetLocation().sendKeys(location);
-		
+
 		landingPage.getCalendar().isDisplayed();
 		landingPage.getCalendar().click();
 		landingPage.getNextMonth().click();
