@@ -47,11 +47,25 @@ public class SearchPage {
 	{
 		return driver.findElement(entirePlaceCheckBox);
 	}
+	By privateRoomCheckBox = By.id("filterItem-room_type-checkbox-room_types-Private_room");
+	public WebElement getPrivateRoomCheckBox()
+	{
+		return driver.findElement(privateRoomCheckBox);
+	}
+	By hotelRoomcheckBox = By.id("filterItem-room_type-checkbox-room_types-Hotel_room");
+	public WebElement getHotelRoomcheckBox()
+	{
+		return driver.findElement(hotelRoomcheckBox);
+	}
+	By sharedRoomcheckBox = By.id("filterItem-room_type-checkbox-room_types-Shared_room");
+	public WebElement getSharedRoomcheckBox()
+	{
+		return driver.findElement(sharedRoomcheckBox);
+	}
 	
 
 	
-	
-	
+
 	
 	By clearButton = By.cssSelector("[data-testid=\"filter-panel-clear-button\"]");
 	public WebElement getClearButton()

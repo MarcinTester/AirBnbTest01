@@ -39,8 +39,16 @@ public class HomesTab extends Base {
 		searchPage.getTypeOfPlaceButton().click();
 		Thread.sleep(1000);
 		searchPage.getEntirePlaceCheckBox().click();
-		Thread.sleep(1000);
+		
 		Assert.assertTrue(searchPage.getEntirePlaceCheckBox().isSelected());
+		searchPage.getPrivateRoomCheckBox().click();
+
+		searchPage.getHotelRoomcheckBox().click();
+
+		searchPage.getSharedRoomcheckBox().click();
+		Thread.sleep(1000);
+		//work in progress
+		//to do: checks
 	}
 	@AfterTest
 	public void tearDown() throws IOException
