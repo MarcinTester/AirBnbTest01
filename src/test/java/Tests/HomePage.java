@@ -27,7 +27,7 @@ public class HomePage extends Base {
 		driver = initializeDriver();
 		visit("https://www.airbnb.com/");
 		Thread.sleep(1000);
-		
+	
 	}
 	@Test(dataProvider="getData")
 	public void basePageNavigation(String location, 
