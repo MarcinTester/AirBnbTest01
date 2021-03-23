@@ -52,20 +52,19 @@ public class HomePage extends Base {
 		Thread.sleep(500);
 		landingPage.selectCheckInDay(checkIndayNumber);
 		landingPage.selectCheckOutDay(checkOutdayNumber);
-		
+		Thread.sleep(500);
 		Assert.assertTrue(landingPage.get1Day().isDisplayed());
 		Assert.assertTrue(landingPage.get3Days().isDisplayed());
 		Assert.assertTrue(landingPage.get7Days().isDisplayed());
-		Assert.assertTrue(landingPage.get7Days().isDisplayed());
-		//to do: is selected checks
+
 		landingPage.get1Day().click();
 		landingPage.get1Day().isSelected();
 		landingPage.get3Days().click();
 		landingPage.get3Days().isSelected();
 		landingPage.get7Days().click();
 		landingPage.get7Days().isSelected();
-		landingPage.getExtendDates().click();
-		
+	
+
 		landingPage.addGuests(adultsNumber, kidsNumber, infantsNumber);
 		landingPage.clickSearch();
 

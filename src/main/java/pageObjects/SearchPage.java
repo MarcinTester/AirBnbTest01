@@ -62,14 +62,10 @@ public class SearchPage {
 	{
 		return driver.findElement(sharedRoomcheckBox);
 	}
-	
-
-	
-
-	
 	By clearButton = By.cssSelector("[data-testid=\"filter-panel-clear-button\"]");
 	public WebElement getClearButton()
 	{
 		return driver.findElement(clearButton);
 	}
+	
 }

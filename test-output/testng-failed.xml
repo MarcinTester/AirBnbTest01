@@ -3,13 +3,12 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="Tests.HomesTab">
+      <class name="Tests.HomePage">
         <methods>
-          <include name="tearDown"/>
-          <include name="calendarTest"/>
+          <include name="basePageNavigation" invocation-numbers="0 1"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- Tests.HomesTab -->
+      </class> <!-- Tests.HomePage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

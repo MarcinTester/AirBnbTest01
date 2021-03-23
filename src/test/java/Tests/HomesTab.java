@@ -3,10 +3,11 @@ package Tests;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Assert;
+//import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -35,17 +36,29 @@ public class HomesTab extends Base {
 		Assert.assertEquals("true", searchPage.getCancellationFlexibilitySwitch().getAttribute("aria-checked"));
 		w.until(ExpectedConditions.elementToBeClickable(searchPage.getClearButton()));	
 		searchPage.getClearButton().click();
-		Assert.assertEquals("false", searchPage.getCancellationFlexibilitySwitch().getAttribute("aria-checked"));
-		searchPage.getTypeOfPlaceButton().click();
-		Thread.sleep(1000);
-		searchPage.getEntirePlaceCheckBox().click();
 		
-		Assert.assertTrue(searchPage.getEntirePlaceCheckBox().isSelected());
+		Assert.assertFalse(searchPage.getCancellationFlexibilitySwitch().isSelected());
+		
+		searchPage.getTypeOfPlaceButton().click();
+
+		
+		searchPage.getEntirePlaceCheckBox().click();
 		searchPage.getPrivateRoomCheckBox().click();
-
 		searchPage.getHotelRoomcheckBox().click();
-
 		searchPage.getSharedRoomcheckBox().click();
+		Assert.assertTrue(searchPage.getEntirePlaceCheckBox().isSelected());
+		Assert.assertTrue(searchPage.getPrivateRoomCheckBox().isSelected());
+		Assert.assertTrue(searchPage.getHotelRoomcheckBox().isSelected());
+		Assert.assertTrue(searchPage.getSharedRoomcheckBox().isSelected());
+		
+		searchPage.getClearButton().click();
+		
+		Assert.assertFalse(searchPage.getSharedRoomcheckBox().isSelected());
+		Assert.assertFalse(searchPage.getHotelRoomcheckBox().isSelected());
+		Assert.assertFalse(searchPage.getPrivateRoomCheckBox().isSelected());
+		Assert.assertFalse(searchPage.getEntirePlaceCheckBox().isSelected());
+		
+		
 		Thread.sleep(1000);
 		//work in progress
 		//to do: checks

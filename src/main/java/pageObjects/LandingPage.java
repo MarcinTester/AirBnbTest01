@@ -124,17 +124,17 @@ public class LandingPage {
 	{
 		return driver.findElement(extendDates);
 	}
-	By oneDay = By.cssSelector("label[for=\"flexible-dates-flexible_date_search_filter_type-1\"]");
+	By oneDay = By.id("flexible_date_search_filter_type-0");
 	public WebElement get1Day()
 	{
 		return driver.findElement(oneDay);
 	}
-	By threeDays = By.cssSelector("label[for=\'flexible-dates-flexible_date_search_filter_type-2']");
+	By threeDays = By.id("flexible_date_search_filter_type-1");
 	public WebElement get3Days()
 	{
 		return driver.findElement(threeDays);
 	}
-	By sevenDays = By.cssSelector("label[for=\"flexible-dates-flexible_date_search_filter_type-3\"]");
+	By sevenDays = By.id("flexible_date_search_filter_type-2");
 	public WebElement get7Days()
 	{
 		return driver.findElement(sevenDays);
