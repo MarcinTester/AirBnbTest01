@@ -3,8 +3,7 @@ package Tests;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-//import org.junit.Assert;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -41,7 +40,6 @@ public class HomesTab extends Base {
 		
 		searchPage.getTypeOfPlaceButton().click();
 
-		
 		searchPage.getEntirePlaceCheckBox().click();
 		searchPage.getPrivateRoomCheckBox().click();
 		searchPage.getHotelRoomcheckBox().click();
@@ -60,8 +58,7 @@ public class HomesTab extends Base {
 		
 		
 		Thread.sleep(1000);
-		//work in progress
-		//to do: checks
+
 	}
 	@AfterTest
 	public void tearDown() throws IOException
