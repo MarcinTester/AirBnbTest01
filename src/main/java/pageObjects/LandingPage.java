@@ -26,12 +26,13 @@ public class LandingPage {
 	{
 		driver.findElement(search).click();
 	}
-	By nextButton = By.xpath("//button[@aria-label = \"Next\"]");
+	
 	By calendar = By.cssSelector("div[data-testid='structured-search-input-field-split-dates-0']");
 	public WebElement getCalendar()
 	{	
 		return driver.findElement(calendar);
 	}
+	By nextButton = By.xpath("//button[@aria-label = \"Next\"]");
 	public WebElement getNextMonth()
 	{
 		return driver.findElement(nextButton);

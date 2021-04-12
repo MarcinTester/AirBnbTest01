@@ -15,25 +15,25 @@ import pageObjects.SearchPage;
 
 public class HomesTab extends Base {
 	@BeforeMethod
-	public void setUp() throws IOException
-	{
-		
+	public void setUp() throws IOException{
 		driver = initializeDriver();
 		visit("https://www.airbnb.com/s/karpacz/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_"
 					+ "dates%5B%5D=april&flexible_trip_dates%5B%5D=march&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_"
 					+ "type=calendar&checkin=2021-03-03&checkout=2021-03-11&source=structured_search_input_header&search_type=filter_change");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
 	}
 	@Test
-	public void calendarTest() throws InterruptedException
-	{	
+	public void buttonTest() throws InterruptedException{	
 		WebDriverWait w = new WebDriverWait(driver,5);
 		SearchPage searchPage = new SearchPage(driver);
+		
 		searchPage.getCancellationFlexibilityButton().click();
 		searchPage.getCancellationFlexibilitySwitch().click();
+		
 		Assert.assertEquals("true", searchPage.getCancellationFlexibilitySwitch().getAttribute("aria-checked"));
+		
 		w.until(ExpectedConditions.elementToBeClickable(searchPage.getClearButton()));	
+		
 		searchPage.getClearButton().click();
 		
 		Assert.assertFalse(searchPage.getCancellationFlexibilitySwitch().isSelected());
@@ -44,25 +44,24 @@ public class HomesTab extends Base {
 		searchPage.getPrivateRoomCheckBox().click();
 		searchPage.getHotelRoomcheckBox().click();
 		searchPage.getSharedRoomcheckBox().click();
-		Assert.assertTrue(searchPage.getEntirePlaceCheckBox().isSelected());
-		Assert.assertTrue(searchPage.getPrivateRoomCheckBox().isSelected());
-		Assert.assertTrue(searchPage.getHotelRoomcheckBox().isSelected());
-		Assert.assertTrue(searchPage.getSharedRoomcheckBox().isSelected());
 		
-		searchPage.getClearButton().click();
+		searchPage.checkIfSelected();
 		
-		Assert.assertFalse(searchPage.getSharedRoomcheckBox().isSelected());
-		Assert.assertFalse(searchPage.getHotelRoomcheckBox().isSelected());
-		Assert.assertFalse(searchPage.getPrivateRoomCheckBox().isSelected());
-		Assert.assertFalse(searchPage.getEntirePlaceCheckBox().isSelected());
+		searchPage.getClearButton().click();	
+		searchPage.checkIfNotSelected();
 		
+		searchPage.getPriceButton().click();
+		searchPage.getDatesButton().click();
+		
+		Thread.sleep(300);
+		searchPage.selectCheckInDay("10");
+		searchPage.selectCheckOutDay("25");
 		
 		Thread.sleep(1000);
 
 	}
 	@AfterTest
-	public void tearDown() throws IOException
-	{
+	public void tearDown() throws IOException	{
 		driver.close();
 	}
 
