@@ -43,6 +43,8 @@ public class CalendarTest extends Base {
 		landingPage.selectCheckInDay(checkIndayNumber);
 		landingPage.selectCheckOutDay(checkOutdayNumber);
 
+		
+		
 		Assert.assertTrue(landingPage.get1Day().isDisplayed());
 		Assert.assertTrue(landingPage.get3Days().isDisplayed());
 		Assert.assertTrue(landingPage.get7Days().isDisplayed());
