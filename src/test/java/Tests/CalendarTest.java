@@ -44,7 +44,7 @@ public class CalendarTest extends Base {
 		landingPage.selectCheckOutDay(checkOutdayNumber);
 
 		
-		
+		//test comment
 		Assert.assertTrue(landingPage.get1Day().isDisplayed());
 		Assert.assertTrue(landingPage.get3Days().isDisplayed());
 		Assert.assertTrue(landingPage.get7Days().isDisplayed());
@@ -60,8 +60,8 @@ public class CalendarTest extends Base {
 	//	landingPage.get7Days().isSelected();
 	//	System.out.println(landingPage.get7Days().isSelected());
 		landingPage.getExtendDates().click();
-	//	landingPage.getExtendDates().isSelected();
-	//	System.out.println(landingPage.getExtendDates().isSelected());
+		landingPage.getExtendDates().isSelected();
+		System.out.println(landingPage.getExtendDates().isSelected());
 		
 
 	}
