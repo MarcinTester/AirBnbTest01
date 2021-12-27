@@ -51,14 +51,14 @@ public class CalendarTest extends Base {
 		Assert.assertTrue(landingPage.get7Days().isDisplayed());
 
 		landingPage.get1Day().click();
-	//	landingPage.get1Day().isSelected();
-	//	System.out.println(landingPage.get1Day().isSelected());
+		landingPage.get1Day().isSelected();
+		System.out.println(landingPage.get1Day().isSelected());
 		landingPage.get3Days().click();
-	//	landingPage.get3Days().isSelected();
-	//	System.out.println(landingPage.get3Days().isSelected());
+		landingPage.get3Days().isSelected();
+		System.out.println(landingPage.get3Days().isSelected());
 		landingPage.get7Days().click();
-	//	landingPage.get7Days().isSelected();
-	//	System.out.println(landingPage.get7Days().isSelected());
+		landingPage.get7Days().isSelected();
+		System.out.println(landingPage.get7Days().isSelected());
 		landingPage.getExtendDates().click();
 		landingPage.getExtendDates().isSelected();
 		System.out.println(landingPage.getExtendDates().isSelected());
