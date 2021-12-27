@@ -49,7 +49,7 @@ public class HomePage extends Base {
 		landingPage.getNextMonth().click();
 	
 		w.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//td[@role='button']"), 0));
-	//	Thread.sleep(500);
+		Thread.sleep(500);
 		landingPage.selectCheckInDay(checkIndayNumber);
 		landingPage.selectCheckOutDay(checkOutdayNumber);
 		Thread.sleep(500);

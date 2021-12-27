@@ -68,6 +68,10 @@ public class SearchPage {
 	public WebElement getDatesButton(){
 		return driver.findElement(datesButton);
 	}
+	By nextButton = By.xpath("//button[@aria-label ='Next']");
+	public WebElement getNextMonth(){
+		return driver.findElement(nextButton);
+	}
 	
 	public void checkIfSelected() {
 		Assert.assertTrue(driver.findElement(sharedRoomcheckBox).isSelected());

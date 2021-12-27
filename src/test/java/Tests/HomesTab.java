@@ -21,6 +21,7 @@ public class HomesTab extends Base {
 					+ "dates%5B%5D=april&flexible_trip_dates%5B%5D=march&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_"
 					+ "type=calendar&checkin=2021-03-03&checkout=2021-03-11&source=structured_search_input_header&search_type=filter_change");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	//	driver.manage().window().maximize();
 	}
 	@Test
 	public void buttonTest() throws InterruptedException{	
@@ -54,7 +55,8 @@ public class HomesTab extends Base {
 		searchPage.getDatesButton().click();
 		
 		Thread.sleep(300);
-		searchPage.selectCheckInDay("10");
+		searchPage.getNextMonth();
+		searchPage.selectCheckInDay("20");
 		searchPage.selectCheckOutDay("25");
 		
 		Thread.sleep(1000);
